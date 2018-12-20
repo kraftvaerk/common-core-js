@@ -1,4 +1,4 @@
-import { stringify as _stringify, parseJSON as _parse } from '../utility.common';
+import { stringify as _stringify, parseJSON as _parse } from '../utility/utility.common';
 
 
 
