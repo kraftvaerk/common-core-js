@@ -1,0 +1,33 @@
+{
+  "name": "@kraftvaerk/common-core",
+  "version": "0.1.0",
+  "description": "common utilities",
+  "main": "dist/index.js",
+  "scripts": {
+    "debug": "echo \"NOT IMPLEMENTED: coming soon...\" && exit 1",
+    "build": "cross-env BABEL_ENV=production babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraftvaerk/common-core-js.git"
+  },
+  "author": {
+    "name": "Kraftvaerk",
+    "url": "http://www.kraftvaerk.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kraftvaerk/common-core-js/issues"
+  },
+  "homepage": "https://github.com/kraftvaerk/common-core-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.0",
+    "cross-env": "^5.2.0"
+  }
+}

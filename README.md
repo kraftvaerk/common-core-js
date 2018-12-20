@@ -38,3 +38,4 @@
     * urlParams (url, keys = [])
     * parameterize (data = {}, prefix = '?', append = '&')
     * parameterizeUrl (data = {}, prefix = '?', append = '&', url = '', replace = false, encode = false)
+    * formToObject (elements = [], exclusions = [''])
