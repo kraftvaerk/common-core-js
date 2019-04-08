@@ -1,26 +1,35 @@
 {
-  "name": "@kraftvaerk/common-core",
-  "version": "0.1.0",
-  "description": "common utilities",
+  "name": "@kraftvaerk/js-utilities",
+  "version": "1.0.0",
+  "description": "Useful modular JavaScript utility collection with zero dependencies",
+  "keywords": [
+    "kraftvaerk",
+    "utilities",
+    "modular"
+  ],
+  "homepage": "https://github.com/kraftvaerk/js-utilities",
+  "bugs": {
+    "url": "https://github.com/kraftvaerk/js-utilities/issues"
+  },
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "debug": "echo \"NOT IMPLEMENTED: coming soon...\" && exit 1",
+    "lint": "eslint .",
     "build": "cross-env BABEL_ENV=production babel src --out-dir dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kraftvaerk/common-core-js.git"
+    "url": "git+https://github.com/kraftvaerk/js-utilities.git"
   },
   "author": {
     "name": "Kraftvaerk",
     "url": "http://www.kraftvaerk.com/"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kraftvaerk/common-core-js/issues"
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
   },
-  "homepage": "https://github.com/kraftvaerk/common-core-js#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
@@ -29,5 +38,11 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-minify": "^0.5.0",
     "cross-env": "^5.2.0"
+    "@kraftvaerk/eslint-config": "1.1.0",
+    "eslint": "^5.16.0",
+    "jest": "^24.7.0"
+  },
+  "jest": {
+    "verbose": true
   }
 }
