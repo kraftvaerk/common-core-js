@@ -1,3 +1,7 @@
 test/
 .travis.yml
 .editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+.gitignore
