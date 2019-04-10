@@ -1,16 +1,11 @@
 {
-    "env": {
-        "development": {
-            "presets": ["env"],
-            "plugins": [
-                "add-module-exports"
-            ]
-        },
-        "production": {
-            "presets": ["env", "minify"],
-            "plugins": [
-                "add-module-exports"
-            ]
-        }
-    }   
+    "presets": [
+      ["@babel/env", {
+        "modules": false,
+        "useBuiltIns": "usage"
+      }]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ]
 }
