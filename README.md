@@ -31,6 +31,24 @@ npm i @kraftvaerk/js-utilities --save
 * [`Stringify`](#call)
 * [`parseJSON`](#collectinto)
 
+## Another Lodash?
+
+No. The goal is to provide frontend developers in Kraftvaerk with a number of useful and small JavaScript codes, not just functions, but also modules and classes. Think of it as a mini version of npm suitable for tiny packages.
+
+
+## What shouldn't be here ##
+
+ - UI components;
+ - CSS selector engine;
+ - Event system - pub/sub;
+ - Template engine;
+ - Anything that isn't generic enough;
+ - Anything that could be a separate library and/or isn't a modular utility...
+
+## Submitting New Modules
+
+Unable to find one suitable? Fork it on GitHub, add the module and submit a pull
+request.
 
 #### 
 <br>[⬆ Back to top](#contents)
@@ -55,27 +73,6 @@ import UUID from '@kraftvaerk/js-utilities/uuid';
 UUID(); // -> 0e3b84af-f911-4a55-b78a-cedf6f0bd815
 ```
 </details>
-
-
-## Another Lodash?
-
-No. The goal is to provide frontend developers in Kraftvaerk with a number of useful and small JavaScript codes, not just functions, but also modules and classes. Think of it as a mini version of npm suitable for tiny packages.
-
-
-## What shouldn't be here ##
-
- - UI components;
- - CSS selector engine;
- - Event system - pub/sub;
- - Template engine;
- - Anything that isn't generic enough;
- - Anything that could be a separate library and/or isn't a modular utility...
-
-## Submitting New Modules
-
-Unable to find one suitable? Fork it on GitHub, add the module and submit a pull
-request.
-
 
 ## License
 
