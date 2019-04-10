@@ -25,14 +25,37 @@
 npm i @kraftvaerk/js-utilities --save
 ```
 
-## Usage
+## Contents
 
-#### UUID
-```javascript
-import uuid from '@kraftvaerk/js-utilities/uuid';
+* [`UUID`](#UUID)
+* [`Stringify`](#call)
+* [`parseJSON`](#collectinto)
 
-console.log(uuid()); // -> 0e3b84af-f911-4a55-b78a-cedf6f0bd815
+
+#### 
+<br>[⬆ Back to top](#contents)
+
+### UUID
+
+Generates a UUID in a browser. Use crypto API to generate a UUID, compliant with [RFC4122](https://www.ietf.org/rfc/rfc4122.txt) version 4.
+
+```js
+const UUID = () =>
+  ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+    (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
+  );
 ```
+
+<details>
+<summary>Examples</summary>
+
+```javascript
+import UUID from '@kraftvaerk/js-utilities/uuid';
+
+UUID(); // -> 0e3b84af-f911-4a55-b78a-cedf6f0bd815
+```
+</details>
+
 
 ## Another Lodash?
 
