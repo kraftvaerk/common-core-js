@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var env=process.env.NODE_ENV;env||console.warn('process.env.NODE_ENV has not been set');var mode={env:env,mock:'mock'===env,local:'local'===env,development:'development'===env,staging:'staging'===env,production:'production'===env};exports.default={env:env,mode:mode},module.exports=exports.default;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var env = process.env.NODE_ENV;
+if (!env) console.warn('process.env.NODE_ENV has not been set');
+var mode = {
+  env: env,
+  mock: env === 'mock',
+  local: env === 'local',
+  development: env === 'development',
+  staging: env === 'staging',
+  production: env === 'production'
+};
+var _default = {
+  env: env,
+  mode: mode
+};
+exports.default = _default;

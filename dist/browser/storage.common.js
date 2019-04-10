@@ -1,1 +1,61 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0}),exports.session=exports.local=void 0;var _utility=require('../utility/utility.common'),type={local:'localStorage',session:'sessionStorage'},core={get:function e(a,b,c/* default value */){var d=self[a].getItem(b);return(0,_utility.parseJSON)(d)||c},set:function e(a,b,c){var d=(0,_utility.stringify)(c);self[a].setItem(b,d)},del:function c(a,b){self[a].removeItem(b)}},local=exports.local={get:function c(a,b/* default value */){return core.get(type.local,a,b)},set:function c(a,b){core.set(type.local,a,b)},del:function b(a){core.del(type.local,a)}},session=exports.session={get:function c(a,b/* default value */){return core.get(type.session,a,b)},set:function c(a,b){core.set(type.session,a,b)},del:function b(a){core.del(type.session,a)}};exports.default={local:local,session:session};
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.session = exports.local = void 0;
+
+var _utility = require("../utility/utility.common");
+
+var type = {
+  local: 'localStorage',
+  session: 'sessionStorage'
+};
+var core = {
+  get: function get(type, id, def
+  /* default value */
+  ) {
+    var result = self[type].getItem(id);
+    return (0, _utility.parseJSON)(result) || def;
+  },
+  set: function set(type, id, value) {
+    var result = (0, _utility.stringify)(value);
+    self[type].setItem(id, result);
+  },
+  del: function del(type, id) {
+    self[type].removeItem(id);
+  }
+};
+var local = {
+  get: function get(id, def
+  /* default value */
+  ) {
+    return core.get(type.local, id, def);
+  },
+  set: function set(id, value) {
+    core.set(type.local, id, value);
+  },
+  del: function del(id) {
+    core.del(type.local, id);
+  }
+};
+exports.local = local;
+var session = {
+  get: function get(id, def
+  /* default value */
+  ) {
+    return core.get(type.session, id, def);
+  },
+  set: function set(id, value) {
+    core.set(type.session, id, value);
+  },
+  del: function del(id) {
+    core.del(type.session, id);
+  }
+};
+exports.session = session;
+var _default = {
+  local: local,
+  session: session
+};
+exports.default = _default;
