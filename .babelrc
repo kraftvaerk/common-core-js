@@ -1,11 +1,12 @@
 {
-    "presets": [
-      ["@babel/env", {
-        "modules": false,
-        "useBuiltIns": "usage"
-      }]
-    ],
-    "plugins": [
-      "@babel/plugin-transform-modules-commonjs"
-    ]
+	"presets": [
+		["@babel/env", {
+			"modules": false,
+			"useBuiltIns": "usage"
+        }],
+        "minify"
+	],
+	"plugins": [
+		"@babel/plugin-transform-modules-commonjs"
+	]
 }

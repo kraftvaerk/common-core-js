@@ -11,7 +11,7 @@ const mode = {
     production: (env === 'production')
 };
 
-export default { 
-    env, 
-    mode 
+export default {
+    env,
+    mode
 };

@@ -1,4 +1,5 @@
-import { stringify as _stringify, parseJSON as _parse } from '../utility/utility.common';
+import stringify from '../../utility/stringify';
+import parseJSON from '../../utility/parse-json';
 
 
 
@@ -10,10 +11,10 @@ const type = {
 const core = {
     get: (type, id, def /* default value */) => {
         const result = self[type].getItem(id);
-        return _parse(result) || def;
+        return parseJSON(result) || def;
     },
     set: (type, id, value) => {
-        const result = _stringify(value);
+        const result = stringify(value);
         self[type].setItem(id, result);
     },
     del: (type, id) => {
@@ -33,7 +34,7 @@ export const session = {
     del: (id) => { core.del(type.session, id); }
 };
 
-export default { 
-    local, 
-    session 
+export default {
+    local,
+    session
 };

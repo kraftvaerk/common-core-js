@@ -23,10 +23,18 @@
     "type": "git",
     "url": "git+https://github.com/kraftvaerk/js-utilities.git"
   },
-  "author": {
-    "name": "Kraftvaerk",
-    "url": "http://www.kraftvaerk.com/"
-  },
+  "contributors": [
+    {
+      "name": "Ehtezaz Shah",
+      "email": "ehtezaz.shah@kraftvaerk.com",
+      "url": "https://github.com/ninjawinja"
+    },
+    {
+      "name": "Mithun Dhiman",
+      "email": "mithun.dhiman@kraftvaerk.com",
+      "url": "https://github.com/mi2oon"
+    }
+  ],
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.0.0"
@@ -36,6 +44,7 @@
     "@babel/core": "^7.4.3",
     "@babel/plugin-transform-modules-commonjs": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
+    "babel-preset-minify": "^0.5.0",
     "@kraftvaerk/eslint-config": "^1.1.0",
     "cross-env": "^5.2.0",
     "core-js": "^2.6.5",

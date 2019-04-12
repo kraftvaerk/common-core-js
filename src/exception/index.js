@@ -22,8 +22,8 @@ const NotImplementedError = function (message = '', exc = null) {
 };
 NotImplementedError.prototype = new Error();
 
-export default { 
-    InvalidResponseError, 
-    InvalidArgumentError, 
+export default {
+    InvalidResponseError,
+    InvalidArgumentError,
     NotImplementedError
 };
