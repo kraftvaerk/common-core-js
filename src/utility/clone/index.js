@@ -1,5 +1,7 @@
-import parseJSON from '../parseJSON';
+import parseJSON from '../parse-json';
 import stringify from '../stringify';
 
 // does a deep clone of an object (functions not allowed)
-export const clone = (object) => { return parseJSON(stringify(object)); };
+const clone = (object) => { return parseJSON(stringify(object)); };
+
+export default clone;

@@ -6,9 +6,11 @@ import parameterize from '../parameterize';
 // @append:     string => joining character; defaults to &
 // @replace:    boolean => replace the entire query string; defaults to false
 // @encode:     boolean => encode uri component result
-export const parameterizeUrl = (data = {}, prefix = '?', append = '&', url = '', replace = false, encode = false) => {
+const parameterizeUrl = (data = {}, prefix = '?', append = '&', url = '', replace = false, encode = false) => {
     const parameterized = parameterize(data, (replace ? prefix : append), append);
     const indexOfPrefix = url.indexOf(prefix);
     const result = (replace) ? (url.substring(0, indexOfPrefix) + parameterized) : (url + parameterized);
     return encode ? encodeURIComponent(result) : result;
 };
+
+export default parameterizeUrl;

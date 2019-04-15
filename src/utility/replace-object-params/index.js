@@ -1,11 +1,11 @@
 import stringify from '../stringify';
-import parseJSON from '../parseJSON';
+import parseJSON from '../parse-json';
 
 // replace placeholder parameters inside an object with provided values
 // i.e. ( { a: '{0}', b: { c: {1} }}, ['value-a', 'value-c'] ) => returns an object with values replaced using the values array
 // @model:      object => defaults to {}
 // @values:     object/array => 26 or [26]
-export const replaceObjectParams = (model, values) => {
+const replaceObjectParams = (model, values) => {
     if (!model) return {};
     if (typeof model !== 'object' && model.constructor === Object) throw new TypeError("invalid model or model is not an object", model);
     values = values instanceof Array ? values : [values];
@@ -22,3 +22,5 @@ export const replaceObjectParams = (model, values) => {
 
     return parseJSON(result);
 };
+
+export default replaceObjectParams;

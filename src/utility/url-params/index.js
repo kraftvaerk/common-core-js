@@ -2,7 +2,7 @@
 // i.e. ('http://www.google.com?x=y&z=null') => returns { x: y, z: null }
 // @url:        string => url string
 // @keys:       string/array => 0-* keys you wish to extract from the url
-export const urlParams = (url, keys = []) => {
+const urlParams = (url, keys = []) => {
     if (!url || typeof url !== 'string') throw new TypeError('invalid url', url);
     if ( !(keys instanceof Array) ) keys = [keys];                                                  // ensure keys is an array
     if (keys.length) keys = keys.map((index, item) => { return item.toString().toLowerCase(); });   // lowercase all keys
@@ -27,3 +27,5 @@ export const urlParams = (url, keys = []) => {
     // return result
     return result;
 };
+
+export default urlParams;

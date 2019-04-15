@@ -4,7 +4,7 @@
 // @values:     object/array => 26 or [26]
 // @regex:      regex => defaults to digits {0}, {1}... {n} */
 // @limit:      boolean => trim result to length of values
-export const replacePlaceholderParams = (placeholder, values, limit) => {
+const replacePlaceholderParams = (placeholder, values, limit) => {
     if (!placeholder) return '';
     if (typeof placeholder !== 'string') throw new TypeError('invalid placeholder or placeholder is not an string', placeholder);
     values = values instanceof Array ? values : [values];
@@ -32,3 +32,5 @@ export const replacePlaceholderParams = (placeholder, values, limit) => {
 
     return result;
 };
+
+export default replacePlaceholderParams;

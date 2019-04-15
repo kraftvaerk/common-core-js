@@ -3,6 +3,8 @@
 // @data:       object => object to parameterize; defaults to {}
 // @prefix:     string => prefix character; defaults to ?
 // @append:     string => joining character; defaults to &
-export const parameterize = (data = {}, prefix = '?', append = '&') => {
+const parameterize = (data = {}, prefix = '?', append = '&') => {
     return (prefix || '') + Object.entries(data).map( ([key, value]) => { return `${key}=${value}`; }).join(append);
 };
+
+export default parameterize;

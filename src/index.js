@@ -1,4 +1,13 @@
-export { default as browser } from './browser';
-export { default as environment } from './environment';
-export { default as exception } from './exception';
-export { default as utility } from './utility';
+import browser from './browser';
+import environment from './environment';
+import exception from './exception';
+import utility from './utility';
+
+
+
+export default {
+    browser,
+    environment,
+    exception,
+    utility
+};
