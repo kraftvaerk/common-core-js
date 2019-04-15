@@ -1,7 +1,5 @@
 import parameterize from './parameterize';
 
-
-
 // parameterizes a url given an object
 // @data:       object => object to parameterize; defaults to {}
 // @prefix:     string => prefix character; defaults to ?

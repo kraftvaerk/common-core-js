@@ -10,8 +10,6 @@ import parameterize from './parameterize';
 import parameterizeUrl from './parameterize-url';
 import formToObject from './form-to-object';
 
-
-
 // export defaults
 export default {
     stringify,
