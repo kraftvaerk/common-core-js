@@ -1,16 +1,16 @@
 {
-  "name": "@kraftvaerk/js-utilities",
-  "version": "1.0.0",
-  "description": "Useful modular JavaScript utility collection with zero dependencies",
+  "name": "@kraftvaerk/lota-js",
+  "version": "1.0.0-alpha.0",
+  "description": "Useful modular JavaScript bits with zero dependencies",
   "keywords": [
     "kraftvaerk",
     "utilities",
     "modular",
     "common"
   ],
-  "homepage": "https://github.com/kraftvaerk/js-utilities",
+  "homepage": "https://github.com/kraftvaerk/lota-js",
   "bugs": {
-    "url": "https://github.com/kraftvaerk/js-utilities/issues"
+    "url": "https://github.com/kraftvaerk/lota-js/issues"
   },
   "license": "MIT",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kraftvaerk/js-utilities.git"
+    "url": "git+https://github.com/kraftvaerk/lota-js.git"
   },
   "contributors": [
     {
