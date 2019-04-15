@@ -1,8 +1,6 @@
 import stringify from '../stringify';
 import parseJSON from '../parseJSON';
 
-
-
 // replace placeholder parameters inside an object with provided values
 // i.e. ( { a: '{0}', b: { c: {1} }}, ['value-a', 'value-c'] ) => returns an object with values replaced using the values array
 // @model:      object => defaults to {}

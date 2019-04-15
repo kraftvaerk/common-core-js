@@ -1,8 +1,6 @@
 import stringify from '../../utility/stringify';
 import parseJSON from '../../utility/parse-json';
 
-
-
 // [REFERENCE]: https://github.com/akinjide/cookiet/blob/master/cookiet.js
 const core = {
     get: (name, def = null /* default value */) => {
@@ -46,6 +44,5 @@ const cookie = {
     set: (name, value, expires, path, strict) => { core.set(name, value, expires, path, strict); }, // security options not exposed by default as they are already optimized for safety
     del: (name) => { core.del(name); }
 };
-
 
 export default cookie;

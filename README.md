@@ -1,28 +1,26 @@
-# js-utilities
+# lota-js
 
-[![Build Status](https://img.shields.io/travis/kraftvaerk/js-utilities/master.svg?style=flat-square)](https://travis-ci.org/kraftvaerk/js-utilities) 
-[![npm Version](https://img.shields.io/npm/v/@kraftvaerk/js-utilities.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/js-utilities) 
-[![npm Downloads](https://img.shields.io/npm/dm/@kraftvaerk/js-utilities.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/js-utilities) 
-[![Dependency Status](https://img.shields.io/david/kraftvaerk/js-utilities.svg?style=flat-square)](https://david-dm.org/kraftvaerk/js-utilities) 
-[![devDependency Status](https://img.shields.io/david/dev/kraftvaerk/js-utilities.svg?style=flat-square)](https://david-dm.org/kraftvaerk/js-utilities/?type=dev)
+[![Build Status](https://img.shields.io/travis/kraftvaerk/lota-js/master.svg?style=flat-square)](https://travis-ci.org/kraftvaerk/lota-js) 
+[![npm Version](https://img.shields.io/npm/v/@kraftvaerk/lota-js.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/lota-js) 
+[![npm Downloads](https://img.shields.io/npm/dm/@kraftvaerk/lota-js.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/lota-js) 
+[![Dependency Status](https://img.shields.io/david/kraftvaerk/lota-js.svg?style=flat-square)](https://david-dm.org/kraftvaerk/lota-js) 
+[![devDependency Status](https://img.shields.io/david/dev/kraftvaerk/lota-js.svg?style=flat-square)](https://david-dm.org/kraftvaerk/lota-js/?type=dev)
 
 > All code is vanilla JS, library agnostic and consist mostly of helper methods that aren't directly related with the DOM, the purpose of this library is to provide modular solutions for common JS problems in kraftvaerk.
 
 ## Main goals
 
  - increase code reuse;
- - be clear (code should be clean/readable);
  - be easy to debug;
  - be easy to maintain;
  - follow best practices;
- - follow standards when possible;
  - be compatible with other frameworks;
  - be modular;
   
 ## Installation
 
 ```bash
-npm i @kraftvaerk/js-utilities --save
+npm i @kraftvaerk/lota-js --save
 ```
 
 ## Contents
@@ -68,7 +66,7 @@ const UUID = () =>
 <summary>Examples</summary>
 
 ```javascript
-import UUID from '@kraftvaerk/js-utilities/uuid';
+import UUID from '@kraftvaerk/lota-js/uuid';
 
 UUID(); // -> 0e3b84af-f911-4a55-b78a-cedf6f0bd815
 ```
@@ -77,46 +75,3 @@ UUID(); // -> 0e3b84af-f911-4a55-b78a-cedf6f0bd815
 ## License
 
 MIT © [Kraftvaerk](http://kraftvaerk.com/)
-
-
-#	storage
-
-	* local
-		* get: (id, def /* default value */)
-    	* set: (id, value)
-		* del: (id)
-
-	* session
-		* get: (id, def /* default value */)
-    	* set: (id, value)
-		* del: (id)
-
-#	environment
-
-	* env
-	* mode
-		* mock
-		* local
-		* development
-		* staging
-		* production
-
-#	exception
-
-	* InvalidResponseError 
-    * InvalidArgumentError 
-    * NotImplementedError
-
-#	utility
-
-	* stringify (object)
-    * parseJSON (json)
-    * clone (source, destination)
-    * extend (source, destination)
-    * replacePlaceholderParams (placeholder, values, regex, limit)
-    * replaceObjectParams (model, values, regex)
-    * replaceStringParams (string = '', object = {})
-    * urlParams (url, keys = [])
-    * parameterize (data = {}, prefix = '?', append = '&')
-    * parameterizeUrl (data = {}, prefix = '?', append = '&', url = '', replace = false, encode = false)
-    * formToObject (elements = [], exclusions = [''])

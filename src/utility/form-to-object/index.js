@@ -2,8 +2,6 @@
 // @elements:    html elements[] => html elements to objectify
 // @exclusions:  values to exclude[] => values to ignore
 
-
-
 // helper functions
 const isValidElement = (element) => {
     return element.name && element.value;

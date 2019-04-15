@@ -1,8 +1,6 @@
 import stringify from '../../utility/stringify';
 import parseJSON from '../../utility/parse-json';
 
-
-
 const type = {
     local: 'localStorage',
     session: 'sessionStorage'
