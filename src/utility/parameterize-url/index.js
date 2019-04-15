@@ -1,4 +1,4 @@
-import parameterize from './parameterize';
+import parameterize from '../parameterize';
 
 
 

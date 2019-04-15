@@ -1,5 +1,5 @@
-import stringify from './stringify';
-import parseJSON from './parseJSON';
+import stringify from '../stringify';
+import parseJSON from '../parseJSON';
 
 
 
