@@ -1,17 +1,14 @@
+const ENV = process.env.NODE_ENV;
 
-const env = (process.env.NODE_ENV);
-if (!env) console.warn('process.env.NODE_ENV has not been set');
+if (!ENV) {
+    console.warn('process.env.NODE_ENV not set');
+}
 
 const mode = {
-    env: (env),
-    mock: (env === 'mock'),
-    local: (env === 'local'),
-    development: (env === 'development'),
-    staging: (env === 'staging'),
-    production: (env === 'production')
+    ENV,
+    MOCK: (ENV === 'mock'),
+    DEVELOPMENT: (ENV === 'development'),
+    PRODUCTION: (ENV === 'production')
 };
 
-export default {
-    env,
-    mode
-};
+export default mode;
