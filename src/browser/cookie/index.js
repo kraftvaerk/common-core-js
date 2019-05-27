@@ -1,23 +1,22 @@
-import stringify from '../../utility/stringify';
-import parseJSON from '../../utility/parse-json';
+const ERROR_NAME_MISSING = 'Missing name';
 
 // [REFERENCE]: https://github.com/akinjide/cookiet/blob/master/cookiet.js
-const core = {
-    get: (name, def = null /* default value */) => {
-        if (!name) throw new Error('core.get.name required');
+const cookie = {
+    get: (name) => {
+        if (!name) throw new Error(ERROR_NAME_MISSING);
 
         let result = null;
         const parts = document.cookie.split(name + '=');
 
         if (parts.length === 2) result = decodeURIComponent(parts.pop().split(';').shift());
 
-        return parseJSON(result) || def;
+        return JSON.parse(result);
     },
-    set: (name = '', value = {}, expires = 14, path = '/', strict = true) => {
-        if (!name) throw new Error('core.set.name required');
+    set: (name = '', value = {}, expires = 14, path = '/', strict = true) => { // security options not exposed by default as they are already optimized for safety
+        if (!name) throw new Error(ERROR_NAME_MISSING);
 
         // key/value pair
-        const data = `${encodeURIComponent(name)}=${encodeURIComponent(stringify(value))};`;
+        const data = `${encodeURIComponent(name)}=${encodeURIComponent(JSON.stringify(value))};`;
 
         // using "expires" because IE doesn't support "max-age".
         const datetime = new Date(new Date().getTime() + parseInt(expires, 10) * 1000 * 60 * 60 * 24);
@@ -37,12 +36,6 @@ const core = {
     del: (name) => {
         document.cookie = `${name}=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
     }
-};
-
-const cookie = {
-    get: (name, def /* default value */) => { return core.get(name, def); },
-    set: (name, value, expires, path, strict) => { core.set(name, value, expires, path, strict); }, // security options not exposed by default as they are already optimized for safety
-    del: (name) => { core.del(name); }
 };
 
 export default cookie;
