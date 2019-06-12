@@ -40,16 +40,16 @@
     "npm": ">=5.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-transform-modules-commonjs": "^7.4.0",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
     "babel-preset-minify": "^0.5.0",
     "@kraftvaerk/eslint-config": "^1.1.0",
     "cross-env": "^5.2.0",
-    "core-js": "^2.6.5",
+    "core-js": "^2.6.9",
     "eslint": "^5.16.0",
-    "jest": "^24.7.0"
+    "jest": "^24.8.0"
   },
   "jest": {
     "verbose": true
