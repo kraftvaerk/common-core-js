@@ -10,7 +10,7 @@
  * Subsequent calls to the throttled function will return the result of the last fn call.
  *
  * EX:
- * var lazyRedraw = throttle(redraw, 300);
+ * const lazyRedraw = throttle(redraw, 300);
  * foo.on.resize.add(lazyRedraw);
  *
  * lazyRedraw();

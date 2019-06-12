@@ -11,7 +11,7 @@
 
 import MAX_INT from '../../constant/MAX_INT';
 import MIN_INT from '../../constant/MIN_INT';
-import randomRange from '../range';
+import randomNumber from '../number';
 
 function randomInt(min, max){
     min = min === null ? MIN_INT : ~~min; // eslint-disable-line no-param-reassign
@@ -20,7 +20,7 @@ function randomInt(min, max){
     // can't be max + 0.5 otherwise it will round up if `rand`
     // returns `max` causing it to overflow range.
     // -0.5 and + 0.49 are required to avoid bias caused by rounding
-    return Math.round( randomRange(min - 0.5, max + 0.499999999999) );
+    return Math.round( randomNumber(min - 0.5, max + 0.499999999999) );
 }
 
 export default randomInt;
