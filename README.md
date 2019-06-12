@@ -52,8 +52,8 @@ npm i @kraftvaerk/lota-js --save
     * [`choice`](#choice)
     * [`guid`](#guid)
     * [`hex`](#hex)
-    * [`int`](#int)
-    * [`range`](#range)
+    * [`int`](#randomInt)
+    * [`number`](#randomNumber)
 * String
     * [`interpolate`](#interpolate)
     * [`trim`](#trim)
@@ -146,7 +146,7 @@ choice(['lorem', 'ipsum', 'dolor']); // 'dolor'
 ```
 </details>
 
-### Choice
+### Guid
 Generates a pseudo-random Globally Unique Identifier Since the total number of GUIDs is 2^122 the chance of generating the same value twice is negligible.
 
 Important: this method uses Math.random by default so the UUID isn't safe (sequence of outputs can be predicted in some cases),
